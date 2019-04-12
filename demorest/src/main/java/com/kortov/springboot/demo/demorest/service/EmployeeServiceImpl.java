@@ -1,41 +1,37 @@
 package com.kortov.springboot.demo.demorest.service;
 
-import com.kortov.springboot.demo.demorest.dao.EmployeeDAO;
+import com.kortov.springboot.demo.demorest.dao.EmployeeRepository;
 import com.kortov.springboot.demo.demorest.entity.Employee;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import javax.transaction.Transactional;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
 
 public class EmployeeServiceImpl implements EmployeeService {
 
-  private final EmployeeDAO employeeDAO;
+  private final EmployeeRepository repository;
 
   @Override
-  @Transactional
   public List<Employee> findAll() {
-    return employeeDAO.findAll();
+    return repository.findAll();
   }
 
   @Override
-  @Transactional
-  public Employee findById(int id) {
-    return employeeDAO.findById(id);
+  public Optional<Employee> findById(int id) {
+    return repository.findById(id);
   }
 
   @Override
-  @Transactional
   public void save(Employee employee) {
-    employeeDAO.save(employee);
+    repository.save(employee);
   }
 
   @Override
-  @Transactional
   public void deleteById(int id) {
-    employeeDAO.deleteById(id);
+    repository.deleteById(id);
   }
 }
