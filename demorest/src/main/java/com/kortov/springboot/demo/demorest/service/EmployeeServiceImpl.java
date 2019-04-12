@@ -1,3 +1,4 @@
+/*
 package com.kortov.springboot.demo.demorest.service;
 
 import com.kortov.springboot.demo.demorest.dao.EmployeeRepository;
@@ -35,3 +36,4 @@ public class EmployeeServiceImpl implements EmployeeService {
     repository.deleteById(id);
   }
 }
+*/

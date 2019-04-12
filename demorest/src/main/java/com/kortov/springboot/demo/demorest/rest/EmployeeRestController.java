@@ -1,3 +1,4 @@
+/*
 package com.kortov.springboot.demo.demorest.rest;
 
 import com.kortov.springboot.demo.demorest.dao.EmployeeDAO;
@@ -60,3 +61,4 @@ public class EmployeeRestController {
     return "Delete employee with id: " + employeeId;
   }
 }
+*/
